@@ -21,7 +21,7 @@ async function getDiscordMemberCount() {
 
 // Sample staff data (replace with your actual staff information)
 const staffMembers = [
-    { ign: "Cudgie7", role: "Founder/Owner", quote: "Capure pakistan" },
+    { ign: "Cudgie7", role: "Founder/Owner", quote: "Capture pakistan" },
     { ign: "Deyo", role: "Founder/Leader", quote: "i keep getting cancer" },
     { ign: "qSuolis", role: "Owner/Dev", quote: "What is java? Python?" },
     { ign: "Cheeeeeky", role: "Owner/Dev", quote: "Earth is flat. it got corners" },
