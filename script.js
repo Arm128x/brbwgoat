@@ -21,21 +21,27 @@ async function getDiscordMemberCount() {
 
 // Sample staff data (replace with your actual staff information)
 const staffMembers = [
-    { ign: "Cudgie7", role: "Founder/Owner", quote: "Capture pakistan" },
-    { ign: "Deyo", role: "Founder/Leader", quote: "i keep getting cancer" },
-    { ign: "qSuolis", role: "Owner/Dev", quote: "What is java? Python?" },
-    { ign: "Cheeeeeky", role: "Owner/Dev", quote: "Earth is flat. it got corners" },
-    { ign: "GunjanXYZ", role: "Media Manager", quote: "Trust me, I wanna KMS" },
-    { ign: "Devilop27", role: "Staff Manager", quote: "eh? ok. Kill yourself" },
-    { ign: "Kebal", role: "Developer", quote: "Why am I so dumb?" },
+    { ign: "Cudgie7", role: "Founder/Owner", quote: " I want to adopt Kebal " },
+    { ign: "Deyo", role: "Founder/Leader", quote: " 24fps is enough. " },
+    { ign: "qSuolis", role: "Owner/Dev", quote: " what is what " },
+    { ign: "Cheeeeeky", role: "Owner/Dev", quote: " Meeeeoooowwwwoo " },
+    { ign: "GunjanXYZ", role: "Media Manager", quote: " NEVER USE DISCORD " },
+    { ign: "Devilop27", role: "Staff Manager", quote: " best 15 year old :sunglasses: " },
+    { ign: "Kebal", role: "Developer", quote: " dont consider me as a developer " },
+    { ign: "Meek_mills", role: "Developer", quote: " Professtional Artificial Intelligence " },
 
-    // Add quotes for other staff members
-    // Add more staff members as needed
+
 ];
 
 function getStarlightSkinUrl(ign) {
+    if(ign === "Deyo"){
+        return `https://mc-heads.net/avatar/Rvemiw99`;
+    }else if(ign === "Cheeeeeky"){
+        return `https://mc-heads.net/avatar/caya/`;
+    }else{
     // Use the default size provided by the API
-    return `https://starlightskins.lunareclipse.studio/render/ultimate/${ign}/bust`;
+        return `https://mc-heads.net/avatar/${ign}`;
+    }
 }
 
 function displayStaffMembers() {
@@ -49,16 +55,14 @@ function displayStaffMembers() {
         staffMember.classList.add('staff-member');
         
         staffMember.innerHTML = `
-            <div class="staff-skin-container">
-                <img src="${skinUrl}" alt="${member.ign}'s skin" class="staff-skin">
-            </div>
-            <div class="staff-info">
+            <div class="staff-content">
+                <div class="staff-skin-container">
+                    <img src="${skinUrl}" alt="${member.ign}'s skin" class="staff-skin">
+                </div>
                 <p class="staff-name">${member.ign}</p>
                 <p class="staff-role">${member.role}</p>
             </div>
-            <div class="staff-quote">
-                <p>"${member.quote}"</p>
-            </div>
+            <p class="staff-quote">"${member.quote}"</p>
         `;
         
         staffList.appendChild(staffMember);
@@ -112,14 +116,6 @@ function fetchBedwarsInfo() {
     // In a real-world scenario, you'd fetch this data from your server's API
     const bedwarsInfo = {
         description: "Experience intense 2v2, 3v3 and 4v4 Ranked Bedwars matches on Bhoppers RBW!",
-        features: [
-            "Skill-based matchmaking for balanced gameplay",
-            "Fully automated system",
-            "Vissually appealing UI",
-            "Awesome tourney system and premium queues",
-            "Seasonal rankings with prestigious titles and prizes",
-            "Anti-cheat system ensuring fair play for all"
-        ],
         gameModes: [
             "Doubles [2v2]",
             "Tripples [3v3]",
@@ -146,10 +142,6 @@ function displayBedwarsInfo(info) {
         <h3>Game Modes:</h3>
         <ul>
             ${info.gameModes.map(mode => `<li>${mode}</li>`).join('')}
-        </ul>
-        <h3>Features:</h3>
-        <ul>
-            ${info.features.map(feature => `<li>${feature}</li>`).join('')}
         </ul>
         <h3>Ranking System:</h3>
         <p>Climb the ranks from ${info.ranks[0]} to ${info.ranks[info.ranks.length - 1]}!</p>
