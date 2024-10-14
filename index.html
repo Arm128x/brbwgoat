@@ -9,20 +9,19 @@
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Add this div just after the opening body tag -->
+
+
     <header class="hero-section">
         <nav class="navbar">
-            <div class="logo">Bhoppers RBW</div>
-
         </nav>
         <div class="hero-content">
-            <h1>Welcome to Bhoppers RBW</h1>
-            <p>Home of Competitive Ranked Bedwars</p>
-            <a href="#bedwars" class="cta-button">Scroll Down!!</a>
+            <img src="logo.png" alt="Welcome to Bhoppers RBW - Home of Competitive Ranked Bedwars" class="welcome-banner">
         </div>
     </header>
     <main>
         <div class="info-row">
-            <section id="bedwars-info" class="info-card wide">
+            <section id="bedwars-info" class="info-card">
                 <h2 class="brbw-title">Ranked Bedwars</h2>
                 <div id="bedwars-details">
                     <p>Loading Ranked Bedwars information...</p>
@@ -30,7 +29,7 @@
             </section>
 
             <section id="discord-info" class="info-card">
-                <h2>Join Our Discord</h2>
+                <h2>Join Our Community</h2>
                 <img src="https://media.discordapp.net/attachments/1279043488461094985/1288854716834644050/Copy_of_today_2.gif?ex=670d1c7e&is=670bcafe&hm=ab9dae8f8f68aabf698547165e26853578fd98b6091e8a99c7d22da6fd4ad39c&=&width=671&height=671" alt="BRBW Europe" class="community-gif">
                 <p>Connect with other players on our Discord server:</p>
                 <a href="https://discord.gg/brbw" target="_blank" class="btn">Join Discord</a>
@@ -73,8 +72,93 @@
                 </div>
             </div>
         </section>
-        <section id="staff-members" class="info-card full-width">
-            <i class="fas fa-users icon"></i>
+        <!-- Add this section after the discord-info-full section and before the staff-members section -->
+        <section id="core-features" class="info-card full-width">
+            <h2>Core Features</h2>
+            <ul class="feature-list">
+                <li>
+                    <strong>Skill-Based Matchmaking:</strong> Ensuring balanced gameplay and fostering a competitive environment where every match is a challenge.
+                </li>
+                <li>
+                    <strong>Automated System:</strong> Streamlining the player experience with efficient management of tournaments, queues, and rankings.
+                </li>
+                <li>
+                    <strong>Visually Appealing UI:</strong> Enhancing the game's aesthetic appeal and creating a polished and immersive experience.
+                </li>
+                <li>
+                    <strong>Tournament System & Premium Queues:</strong> Providing opportunities for elite competition, showcasing skill, and earning coveted rewards.
+                </li>
+                <li>
+                    <strong>Seasonal Rankings & Prestigious Titles:</strong> Motivating players to strive for excellence, offering recognition for their achievements, and fostering a sense of progression.
+                </li>
+                <li>
+                    <strong>Anti-Cheat System:</strong> Guaranteeing fair play for all players, ensuring a level playing field, and maintaining the integrity of the competitive landscape.
+                </li>
+            </ul>
+        </section>
+        <!-- Add this section after the core-features section and before the staff-members section -->
+        <div class="info-row">
+            <section id="other-gamemodes" class="info-card">
+                <h2>Other Gamemodes</h2>
+                <ul class="gamemode-list">
+                    <li class="gamemode-item">
+                        <div class="gamemode-name">Bedfight 1v1</div>
+                        <div class="gamemode-info">a player vs player gamemode where the first one to break the bed and kills the opponent wins</div>
+                    </li>
+                    <li class="gamemode-item">
+                        <div class="gamemode-name">Housing</div>
+                        <div class="gamemode-info">its also a player vs player mode where we can hit each other and player to stand on platform with out voiding wins</div>
+                    </li>
+                    <li class="gamemode-item">
+                        <div class="gamemode-name">Build FFA</div>
+                        <div class="gamemode-info">an intense PvP mode where players can hit each other and can build with blocks.</div>
+                    </li>
+                    <li class="gamemode-item">
+                        <div class="gamemode-name">More coming soon!</div>
+                        <div class="gamemode-info">Stay tuned for exciting new game modes and features!</div>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="ranking-system" class="info-card wide">
+                <h2>Ranking System</h2>
+                <div class="rank-tiers">
+                    <div class="rank-tier">
+                        <h3 class="rank-name obsidian">OBSIDIAN</h3>
+                        <p class="rank-description">The pinnacle of achievement, unmatched and unrivaled</p>
+                    </div>
+                    <div class="rank-tier">
+                        <h3 class="rank-name diamond">DIAMOND</h3>
+                        <p class="rank-description">Unmatched skill, a force to be reckoned with</p>
+                    </div>
+                    <div class="rank-tier">
+                        <h3 class="rank-name platinum">PLATINUM</h3>
+                        <p class="rank-description">Unwavering mastery, setting the standard</p>
+                    </div>
+                    <div class="rank-tier">
+                        <h3 class="rank-name gold">GOLD</h3>
+                        <p class="rank-description">Exceptional skill, consistently exceeding expectations</p>
+                    </div>
+                    <div class="rank-tier">
+                        <h3 class="rank-name silver">SILVER</h3>
+                        <p class="rank-description">Consistent performance, demonstrating mastery</p>
+                    </div>
+                    <div class="rank-tier">
+                        <h3 class="rank-name bronze">BRONZE</h3>
+                        <p class="rank-description">Solid foundation, ready to refine</p>
+                    </div>
+                    <div class="rank-tier">
+                        <h3 class="rank-name iron">IRON</h3>
+                        <p class="rank-description">Developing skills and gaining experience</p>
+                    </div>
+                    <div class="rank-tier">
+                        <h3 class="rank-name coal">COAL</h3>
+                        <p class="rank-description">The foundation of your journey</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="staff-members" class="info-card">
             <h2>Staff Members</h2>
             <div id="staff-list">
                 <!-- Staff members will be dynamically added here -->
